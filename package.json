@@ -1,0 +1,12 @@
+{
+  "name": "react-marketo-form",
+  "version": "1.0.0",
+  "description": "A React component to manipulate and display Marketo forms.",
+  "main": "index.js",
+  "repository": "https://github.com/laneparton/react-marketo-form.git",
+  "author": "Lane Parton <lane@laneparton.com>",
+  "license": "MIT",
+  "dependencies": {
+    "webpack": "^5.21.2"
+  }
+}
