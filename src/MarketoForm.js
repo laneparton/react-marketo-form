@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 
 import PropTypes from 'prop-types';
 
-function appendForms2(baseUrl, setForms2Loaded) {
+const appendForms2 = (baseUrl, setForms2Loaded) => {
     if (window.MktoForms2) return setForms2Loaded(true);
   
     const script = document.createElement("script");
@@ -17,7 +17,7 @@ const MarketoForm = ({ baseUrl, munchkinId, formId, descriptorCallback, whenRend
     const [formDescriptorLoaded, setFormDescriptorLoaded] = useState(false);
     const [formReady, setFormReady] = useState(false);
 
-    function loadMktoFormSync(descriptor) {
+    const loadMktoFormSync = (descriptor) => {
       descriptor.action = "/index.php/leadCapture/save";
       if (forms2Loaded) {
         setFormDescriptor(descriptor);
@@ -26,7 +26,7 @@ const MarketoForm = ({ baseUrl, munchkinId, formId, descriptorCallback, whenRend
 
     window.loadMktoFormSync = loadMktoFormSync;
 
-    function setupForm(descriptor) {
+    const setupForm = (descriptor) => {
       if(forms2Loaded) {
         window.MktoForms2.setOptions({
           rootUrl: baseUrl,

@@ -2,11 +2,18 @@
   "name": "react-marketo-form",
   "version": "1.0.0",
   "description": "A React component to manipulate and display Marketo forms.",
-  "main": "index.js",
+  "main": "dist/MarketoForm.js",
   "repository": "https://github.com/laneparton/react-marketo-form.git",
   "author": "Lane Parton <lane@laneparton.com>",
   "license": "MIT",
-  "dependencies": {
-    "webpack": "^5.21.2"
+  "devDependencies": {
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.14.8",
+    "@babel/preset-env": "^7.14.9",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-react": "^7.14.5"
+  },
+  "scripts": {
+    "build": "rm -rf dist && NODE_ENV=production babel src --out-dir dist --copy-files"
   }
 }
